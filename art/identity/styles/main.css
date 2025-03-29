@@ -1,0 +1,56 @@
+/* Import utility styles */
+@import 'utils/variables.css';
+@import 'utils/typography.css';
+@import 'utils/animations.css';
+
+/* Import layout styles */
+@import 'layouts/sections.css';
+@import 'layouts/glass-panel.css';
+
+/* Import component styles */
+@import 'components/buttons.css';
+@import 'components/cursor.css';
+@import 'components/gallery.css';
+@import 'components/navbar.css';
+@import 'components/shapes.css';
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Courier New', monospace;
+    overflow-x: hidden;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+canvas {
+    display: block;
+    transition: 2s;
+}
+
+.color-shift {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .shape {
+        opacity: 0.3;
+    }
+}

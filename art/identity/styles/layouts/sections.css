@@ -1,0 +1,13 @@
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-item {
+    transition: var(--transition-default);
+}

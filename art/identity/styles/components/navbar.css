@@ -1,0 +1,31 @@
+.nav-custom {
+    background: rgba(25, 25, 35, 0.8);
+    backdrop-filter: var(--blur-panel);
+    transition: var(--transition-slow);
+}
+
+.nav-link {
+    color: var(--text-light);
+    margin: 0 0.5rem;
+    position: relative;
+    transition: var(--transition-default);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--color-coral), var(--color-lavender));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-lavender);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}

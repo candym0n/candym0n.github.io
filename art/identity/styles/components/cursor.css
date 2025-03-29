@@ -1,0 +1,17 @@
+body,
+.cursor-custom {
+    cursor: none;
+}
+
+.cursor-custom {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 94, 91, 0.5);
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+}

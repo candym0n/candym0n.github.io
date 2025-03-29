@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indepdent Art Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Custom cursor -->
+    <div class="cursor-custom"></div>
+
+    <!-- Canvas background -->
+    <div id="canvas-container">
+        <canvas id="background-canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg nav-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand color-shift" href="#">Independant Art Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Animated shapes -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center parallax-item" data-depth="0.2">
+                    <div class="glass-panel">
+                        <h1 class="mb-4">Independant Art Project</h1>
+                        <p id="info-text">My independant art project is a website used to demonstrate the art projects I have created over the semester. Click anywhere to see the change!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="content-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <div class="glass-panel">
+                        <h2 class="color-shift">Gallery</h2>
+                        <p>A collection of artworks</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="images/artwork1.jpg" alt="Artwork Number 1" />
+                        <div class="gallery-caption">
+                            <h5>Modern Stained Glass</h5>
+                            <p>Abstract geometric shapes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="images/artwork2.jpg" alt="Artwork Number 2" />
+                        <div class="gallery-caption">
+                            <h5>Ethereal Nightscape</h5>
+                            <p>Tree under surreal blue sky</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="images/artwork3.jpg" alt="Artwork Number 3" />
+                        <div class="gallery-caption">
+                            <h5>The Scream</h5>
+                            <p>Figure in distress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <img src="images/artwork4.jpg" alt="Artwork Number 4" />
+                        <div class="gallery-caption">
+                            <h5>Layered Color Sculpture</h5>
+                            <p>Abstract wavy, stacked structure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <img src="images/artwork5.jpg" alt="Artwork Number 5" />
+                        <div class="gallery-caption">
+                            <h5>Distored Faces</h5>
+                            <p>Surreal, melting human expressions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <footer class="bg-dark text-white text-center py-5">
+            <div class="container">
+                <h3>Independant Art Project</h3>
+                <p>Jayden Bascio</p>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script origin="anonymous" src="js/main.js" type="module"></script>
+</body>
+
+</html>

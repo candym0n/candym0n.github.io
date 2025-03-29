@@ -1,0 +1,13 @@
+.glass-panel {
+    background: var(--color-dark-panel);
+    backdrop-filter: var(--blur-panel);
+    border-radius: var(--radius-panel);
+    padding: 2rem;
+    box-shadow: var(--shadow-panel);
+    transition: var(--transition-slow);
+}
+
+.glass-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-panel-hover);
+}

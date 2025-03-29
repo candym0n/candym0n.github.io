@@ -1,0 +1,32 @@
+:root {
+    /* Colors */
+    --bg-dark: #121212;
+    --text-light: #f8f9fa;
+    --color-coral: #FF5E5B;
+    --color-lavender: #D789D7;
+    --color-purple: #9D65C9;
+    --color-deep-purple: #5D54A4;
+    --color-dark-panel: rgba(25, 25, 35, 0.7);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(45deg, var(--color-coral), var(--color-lavender), var(--color-purple), var(--color-deep-purple));
+    --gradient-button: linear-gradient(45deg, var(--color-deep-purple), var(--color-purple));
+    --gradient-button-hover: linear-gradient(45deg, var(--color-purple), var(--color-deep-purple));
+    
+    /* Shadows */
+    --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --shadow-panel-hover: 0 15px 35px rgba(0, 0, 0, 0.4);
+    --shadow-button: 0 4px 15px rgba(93, 84, 164, 0.4);
+    --shadow-button-hover: 0 7px 20px rgba(93, 84, 164, 0.6);
+    
+    /* Blur */
+    --blur-panel: blur(10px);
+    
+    /* Border radius */
+    --radius-panel: 15px;
+    --radius-button: 25px;
+    
+    /* Transitions */
+    --transition-default: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+}
