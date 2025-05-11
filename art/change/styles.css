@@ -1,0 +1,20 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Old versions of Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently supported by Chrome, Edge, Firefox, Opera, and Safari */
+}
+
+svg {
+    background-color: lightblue;
+    width: 100vw;
+    height: 100vh;
+}
+
+.world {
+    transform:translateY(100vh) translateX(40vw) scaleX(2) scaleY(2);
+}

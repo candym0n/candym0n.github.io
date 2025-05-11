@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Plant Artwork</title>
+</head>
+
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <g class="world">
+            <!-- Plants to be added here-->
+            <g id="plants"></g>
+
+            <!-- The protagonist's head -->
+            <g>
+                <!-- Head shape (circle with a flat top) -->
+                <path d="
+                M 0 0
+                H 100
+                Q 70 -10 70 -30
+                A 1000 150 0 0 0 80 -100
+                H 20
+                A 1000 150 0 0 0 30 -30
+                Q 20 -10 0 0
+                Z" fill="#FFE6C7" stroke="#000" stroke-width="4" />
+
+                <!-- Eyes (simple ovals) -->
+                <ellipse cx="30" cy="-70" rx="10" ry="15" fill="white" stroke="#000" stroke-width="2" />
+                <ellipse cx="70" cy="-70" rx="10" ry="15" fill="white" stroke="#000" stroke-width="2" />
+
+                <!-- Pupils (small black dots) -->
+                <circle cx="30" cy="-70" r="4" fill="black" />
+                <circle cx="70" cy="-70" r="4" fill="black" />
+
+                <!-- Mouth (straight line for emotionless expression) -->
+                <path id="mouth" d="M 40 -45 Q 50 -40 60 -45" stroke="#000" stroke-width="3" fill="none" />
+            </g>
+
+            <!-- Happy Mother's Day text -->
+            <g>
+                <path id="curvePath" d="M -200 -250 Q 85 -500 250 -250" fill="none" stroke="none" />
+                <text id="happyText" font-family="Arial, sans-serif" font-size="40" fill="#e91e63" opacity="0">
+                    <textPath href="#curvePath" text-anchor="middle" startOffset="50%">
+                        Happy Mother's Day!
+                    </textPath>
+                </text>
+            </g>
+        </g>
+    </svg>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- Main JavaScript file -->
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>
