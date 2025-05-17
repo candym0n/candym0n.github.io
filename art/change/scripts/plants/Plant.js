@@ -1,4 +1,4 @@
-import { ELEMENTS, SVG_NS } from "../constants.js";
+import { ELEMENTS, ANIMATION, SVG_NS } from "../constants.js";
 import Leaf from "./Leaf.js";
 import { StemSegment } from "./StemSegment.js";
 
@@ -88,7 +88,7 @@ export default class Plant {
             gsap.to(this.flowerElement, {
                 opacity: 0,
                 y: 0,
-                duration: 0.7
+                duration: ANIMATION.FLOEWR_WITHER_DUR
             });
         }
 
@@ -110,5 +110,19 @@ export default class Plant {
      */
     get StemBaseX() {
         return this.stem.x1.baseVal.value;
+    }
+
+    /**
+     * @returns {boolean} Is the plant fully gone?
+     */
+    get NoPlant() {
+        return this.stems.length == 0;
+    }
+
+    /**
+     * @returns {number} The percentage grown (0 - 1)
+     */
+    get GrownPercentage() {
+        return this.stems.length / this.max;
     }
 }

@@ -16,5 +16,5 @@ svg {
 }
 
 .world {
-    transform:translateY(100vh) translateX(40vw) scaleX(2) scaleY(2);
+    transform: translateY(100vh) translateX(45vw) scaleX(2) scaleY(2);
 }

@@ -1,4 +1,4 @@
-import { GROWTH, SVG_NS } from "../constants.js"
+import { ANIMATION, SVG_NS } from "../constants.js"
 import Leaf from "./Leaf.js";
 
 export class StemSegment {
@@ -42,7 +42,7 @@ export class StemSegment {
         // Animate the stem to slowly grow in
         gsap.to(segment, {
             attr: { x2: this.startX + this.dirX, y2: this.startY + this.dirY },
-            duration: 0.7,
+            duration: ANIMATION.STEM_GROW_DUR,
             ease: "power2.out",
             transformOrigin: "bottom"
         });
@@ -55,9 +55,11 @@ export class StemSegment {
                 scale: 0
             });
 
+            gsap.killTweensOf(parent);
+
             gsap.to(parent, {
                 scale: 1,
-                duration: 0.7
+                duration: ANIMATION.FLOWER_GROW_DUR
             });
 
             return;
@@ -71,11 +73,11 @@ export class StemSegment {
     }
 
     get dirX() {
-        return GROWTH.SEGMENT_LENGTH * Math.cos(this.rotation);
+        return ANIMATION.SEGMENT_LENGTH * Math.cos(this.rotation);
     }
 
     get dirY() {
-        return -GROWTH.SEGMENT_LENGTH * Math.sin(this.rotation);
+        return -ANIMATION.SEGMENT_LENGTH * Math.sin(this.rotation);
     }
 
     /**
@@ -93,7 +95,7 @@ export class StemSegment {
                 x2: this.element.x1.animVal.value,
                 y2: this.element.y1.animVal.value,
             },
-            duration: 0.7,
+            duration: ANIMATION.STEM_WITHER_DUR,
             onComplete: () => {
                 this.element.remove();
             }

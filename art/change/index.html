@@ -9,11 +9,70 @@
 </head>
 
 <body>
-
     <svg xmlns="http://www.w3.org/2000/svg">
         <g class="world">
+            <!-- Bars for determining plant health -->
+            <g>
+                <!-- Water bar -->
+                <g>
+                    <path d="
+                        M -215 -105
+                        L -225 -90
+                        A 5 5 0 0 0 -205 -90
+                        Z
+                    " stroke="#000" fill="blue"></path>
+                    <rect x="-200" y="-100" width="150" height="15" stroke="#000" fill="#AAA"></rect>
+                    <rect x="-197" y="-97" width="72" height="9" stroke="none" fill="green" id="waterBar"></rect>
+                </g>
+
+                <!-- Fertilizer bar -->
+                <g>
+                    <!-- The label -->
+                    <g transform="translate(-220, -50)">
+                        <!-- The main bag, excluding the logo and dirt -->
+                        <path d="
+                            M 13 -10
+                            Q 15 0 13 10
+                            Q 0 15 -13 10
+                            Q -15 0 -13 -10
+                            
+                            M -16 -11
+                            Q 0 -9 16 -11
+                            V -15
+                            H -16
+                            V -11
+                        " stroke="#000" fill="#63593B"></path>
+
+                        <!-- The logo on the bag -->
+                        <circle cx="0" cy="0" r="5" fill="#FFF" stroke="#000"></circle>
+                        <line x1="0" y1="5" x2="0" y2="0" stroke="#000"></line>
+                        <circle cx="0" cy="-2" r="2" stroke="#000" fill="#0F0"></circle>
+
+                        <!-- Dirt -->
+                        <path d="
+                            M -14 -15
+                            Q -2 -30 14 -15
+                            Z
+                        " stroke="#000" fill="#99612C"></path>
+                    </g>
+
+                    <rect x="-200" y="-60" width="150" height="15" stroke="#000" fill="#AAA"></rect>
+                    <rect x="-197" y="-57" width="72" height="9" stroke="none" fill="green" id="fertilizerBar"></rect>
+                </g>
+            </g>
+
             <!-- Plants to be added here-->
             <g id="plants"></g>
+
+            <!-- Particles from the watering can and fertilizer bag -->
+            <g id="particles"></g>
+
+            <!-- The shelf where everything is -->
+            <g>
+                <rect x="300" y="-150" width="10" height="200" fill="#A1662F"></rect>
+                <polyline points="200,-40 300,-40 300,-30 205,-30" fill="#A1662F"></polyline>
+                <polyline points="200,-110 300,-110 300,-100 205,-100" fill="#A1662F"></polyline>
+            </g>
 
             <!-- The protagonist's head -->
             <g>
@@ -36,18 +95,59 @@
                 <circle cx="30" cy="-70" r="4" fill="black" />
                 <circle cx="70" cy="-70" r="4" fill="black" />
 
-                <!-- Mouth (straight line for emotionless expression) -->
-                <path id="mouth" d="M 40 -45 Q 50 -40 60 -45" stroke="#000" stroke-width="3" fill="none" />
+                <!-- Mouth -->
+                <path id="mouth" d="M 40 -45 Q 50 -50 60 -45" stroke="#000" stroke-width="3" fill="none" />
             </g>
 
-            <!-- Happy Mother's Day text -->
-            <g>
-                <path id="curvePath" d="M -200 -250 Q 85 -500 250 -250" fill="none" stroke="none" />
-                <text id="happyText" font-family="Arial, sans-serif" font-size="40" fill="#e91e63" opacity="0">
-                    <textPath href="#curvePath" text-anchor="middle" startOffset="50%">
-                        Happy Mother's Day!
-                    </textPath>
-                </text>
+            <!-- The watering can -->
+            <g id="wateringCan">
+                <path d="
+                    M 13 -20
+                    L 14 -13
+                    A 30 12 -50 0 1 19 10
+                    L 20 15
+                    H -15
+                    L -14 10
+                    L -30 -10
+                    L -26 -15
+                    L -14 0
+                    L -10 -20
+                    Z
+
+                    M 17 2
+                    L 15 -7
+                    Q 25 -8 17 2
+                    Z
+                " stroke="#000" fill="#555" fill-rule="evenodd"></path>
+            </g>
+
+            <!-- The fertilizer bag -->
+            <g id="fertilizer">
+                <!-- The main bag, excluding the logo and dirt -->
+                <path d="
+                    M 13 -10
+                    Q 15 0 13 10
+                    Q 0 15 -13 10
+                    Q -15 0 -13 -10
+                    
+                    M -16 -11
+                    Q 0 -9 16 -11
+                    V -15
+                    H -16
+                    V -11
+                " stroke="#000" fill="#63593B"></path>
+
+                <!-- The logo on the bag -->
+                <circle cx="0" cy="0" r="5" fill="#FFF" stroke="#000"></circle>
+                <line x1="0" y1="5" x2="0" y2="0" stroke="#000"></line>
+                <circle cx="0" cy="-2" r="2" stroke="#000" fill="#0F0"></circle>
+
+                <!-- Dirt -->
+                <path d="
+                    M -14 -15
+                    Q -2 -30 14 -15
+                    Z
+                " stroke="#000" fill="#99612C"></path>
             </g>
         </g>
     </svg>

@@ -1,5 +1,5 @@
 import StemSegment from "./Plant.js";
-import { ELEMENTS, SVG_NS } from "../constants.js";
+import { ELEMENTS, ANIMATION, SVG_NS } from "../constants.js";
 
 export default class Leaf {
     /** @private The <g> that contains the entire leaf */
@@ -64,7 +64,7 @@ export default class Leaf {
             scale: Math.random() * 0.4 + 0.3,
             opacity: 1,
             rotation: -stem.rotation * 180 / Math.PI + side * 60,
-            duration: 0.7,
+            duration: ANIMATION.LEAF_GROW_DUR,
             ease: "back.out(2)"
         });
     }
@@ -76,7 +76,7 @@ export default class Leaf {
         gsap.to(this.element, {
             opacity: 0,
             y: 0,
-            duration: 1.5,
+            duration: ANIMATION.STEM_WITHER_DUR,
             rotation: Math.random() * 720 - 360,
             onComplete: () => {
                 this.element.remove();
