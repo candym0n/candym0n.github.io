@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d');
 const playPauseBtn = document.getElementById('playPauseBtn');
 
 let system;
-let running = false;
+let running = true;
 let speed = 5; // 1-10
 let diversity = 70; // 0-100
 let inertiaMultiplier = 0.9; // 0 - 1
